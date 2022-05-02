@@ -1,0 +1,760 @@
+@font-face{
+  font-family: "Gotham";
+  src: url("gotham-Thin.otf");
+  font-display: fallback;
+}
+@font-face{
+  font-family: "Gotham-Bold";
+  src: url("gotham-Bold.otf");
+  font-display: fallback;
+}
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-font: 'Gotham'; 
+    --secondary-font: 'Gotham-Bold';
+    --body-font: 'Gotham';
+    --main-font-color-dark: white;
+    --secondary-font-color: white;
+    --body-font-color: darkgrey;
+}
+
+html{
+  font-family: var(--body-font);
+  font-size: 10px;
+  color: var(--body-font-color);
+  scroll-behavior: smooth;
+}
+body{
+  overflow-x: hidden;
+}
+
+
+.logo{
+  width: 20%;
+}
+section{
+  padding: 3.9rem 0;
+  overflow: hidden;
+}
+strong{
+  color: black;
+}
+img{
+  width: 100%;
+  max-width: 100%;
+}
+
+a{
+  text-decoration: none;
+}
+
+p{
+  font-size: 1.5rem;
+  text-align: justify;
+}
+
+.container{
+  width: 100%;
+  max-width: 122.5rem;
+  margin: 0 auto;
+  padding: 0 2.4rem;
+  
+}
+
+#allrelease iframe{
+  margin-bottom: 5rem;
+  box-shadow: 3px 5px 15px 0px dimgray;
+}
+
+#allrelease iframe:hover{
+   box-shadow: 3px 5px 15px 0px black;
+   transition: 1s;
+}
+
+
+/* Header*/
+
+
+header{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: linear-gradient(to bottom, rgba(0,0,0,.3), transparent);
+}
+
+.nav{
+  height: 7.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+
+}
+
+.menu-toggle{
+  color: #fff;
+  font-size: 2.2rem;
+  position: absolute;
+  top: 50%;
+  transform:  translateY(-50%);
+  right: 2.5rem;
+  cursor: pointer;
+  z-index: 1500;
+}
+
+.fa-times{
+  display: none;
+  
+}
+
+.nav-list{
+  list-style: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0,0,10,.97);
+  padding: 4.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  z-index: 1250;
+  transform: translateX(-100%);
+  transition: transform .4s ease-in-out;
+}
+
+
+
+.open .fa-times{
+  display: block;
+}
+.open .fa-bars{
+  display: none;
+}
+
+
+.open .nav-list{
+  transform: translateX(0);
+
+}
+
+
+.nav-item{
+  border-bottom: 1px solid rgba(255,255,255, .3);
+}
+
+.nav-link{
+  display: block;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  letter-spacing: 3px;
+  margin-right: 2px;
+  transition: color .5;
+  margin-bottom: .3rem;
+  
+}
+
+
+
+
+
+/* HERO */
+
+.hero{
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to top, rgba(0,0,88, .8), transparent), url("images/zenebonacrowd.jpeg") center no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items:center;
+  text-align: center;
+  filter: grayscale(70%);
+  box-shadow: 0px 0px 18px 1px gray;
+}
+
+.sub-headline{
+  font-size: 4rem;
+  font-family: var(--secondary-font);
+  color: var(--secondary-font-color);
+  font-weight: 600;
+  text-shadow: 1px 1px 3px black;
+  opacity: 0;
+  letter-spacing: .5rem;
+  animation: fadeUp .7s forwards;
+  animation-delay: 1s;
+  line-height: .9;
+}
+
+
+
+.headline_records{
+  color: #fff;
+  font-size: 1.5rem;
+  font-family: var(--main-font);
+  text-transform: uppercase;
+  letter-spacing: .4rem;
+  animation: scale 1s forwards;
+  margin-left: 17.5rem;
+}
+
+
+
+
+.single-animation{
+  opacity: 0;
+   animation: fadeDown .5s forwards;
+  animation-delay: 1.5s;
+}
+
+
+
+
+
+
+.btn{
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right:  -2px;
+  box-shadow: 1px 1px 6px 1px black;
+}
+
+.btn{
+  font-size: 1.1rem;
+  background-color: #fff;
+  padding: 1rem 2rem;
+  color: var(--body-font-color);
+  border-radius: .4rem;
+  transition: background-color .5s;
+}
+
+.btn:hover,
+.btn:focus{
+  color: #fff;
+  background-color: var(--secondary-font-color);
+}
+
+
+/*Discover our story*/
+
+
+.global-headline{
+  text-align: center;
+  
+}
+
+.discover-our-story .global-headline{
+  margin-top: 2rem;
+  font-size: 2rem;
+  color: black;
+  text-align: left;
+}
+
+
+
+
+.headline-dark{
+  font-family: "Gotham-Bold", sans-serif;
+  font-size: 2.5rem;
+  letter-spacing: .3rem;
+  padding-bottom: 2rem;
+  text-transform: uppercase;
+  color: #212224;
+
+}
+
+.global-headline .sub-headline{
+  letter-spacing: -1px;
+  line-height: .42;
+}
+
+.restaurant-info{
+  text-align: center;
+}
+
+.restaurant-info .image-group{
+  text-align: center;
+}
+.restaurant-description{
+  margin-bottom: 3rem;
+}
+
+.restaurant-description p{
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  color: #222222;
+}
+
+.restaurant-description .btn-body-btn{
+  font-size: 1.5rem;
+  color: var(--secondary-font-color);
+  position: relative;
+  transition:  color 1s;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+}
+
+.restaurant-description .btn-body-btn::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom:  -3px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--secondary-font-color);
+  transition: background-color .5s;
+}
+
+.restaurant-description .btn-body-btn:hover,
+.restaurant-description .btn-body-btn:focus{
+  color: var(--main-font-color-dark);
+}
+
+.restaurant-description .btn-body-btn:hover::before,
+.restaurant-description .btn-body-btn:focus::before{
+  background-color: var(--main-font-color-dark);
+}
+
+
+/* Tasteful recipes*/
+
+
+
+
+.between{
+  min-height: 45vh;
+  display: flex;
+  align-items: center;
+}
+#release{
+  background: url("images/black.jpg") no-repeat center;
+  background-size: cover;
+
+}
+
+.new{
+  display: block;
+  font-family: "Gotham-Bold";
+  font-size: 2rem;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 1rem 0 0;
+  letter-spacing: 7px;
+  padding: 1rem 0 1rem 1rem;
+  background: linear-gradient(to left, rgba(82,132,142,  0)10%, rgba(32,73,121,.8) 100%);
+}
+
+#buy{
+  background: linear-gradient(90deg, rgba(32,73,121, .8)20%, rgba(82,132,142,.8) 100%);
+  color: ghostwhite;
+  font-size: 1.5rem;
+  font-family: var(--secondary-font);
+}
+#buy:hover{
+  background: linear-gradient(90deg, rgba(32,73,121, .9) 20%, rgba(82,132,142,.9) 100%);
+  color: white;
+}
+/* Discover our menu */
+
+
+.player-logo img{
+  margin-bottom: 3rem;
+}
+
+
+
+.podcast-title{
+   display: inline-block;
+  font-family: "Gotham-Bold";
+  font-size: 3rem;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-align: center;;
+  width: 100%;
+  margin: 3rem 0;
+
+}
+
+.discover-our-menu .restaurant-description{
+  padding-top: 5rem;
+}
+
+.discover-our-menu .body-btn{
+  background-color: black;
+  margin-top: 5rem;
+  
+}
+
+/* Upcoming Events*/
+  
+.upcoming{
+  background-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,.1)), url("images/angel.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: grayscale(80%);
+  width: 100%;
+  color: ghostwhite;
+  padding: 9rem 3rem;
+}
+
+
+.upcoming-event{
+  line-height: 3rem;
+}
+
+
+.upcoming-title{
+  font-size: 3rem;
+  font-family: var(--secondary-font);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.date{
+  font-size: 2rem;
+  font-family: var(--secondary-font);
+}
+.club{
+  font-size: 1.5rem;
+}
+
+.tickets{
+  font-size: 1.2rem;
+}
+/* Footer */
+
+footer{
+  padding: 8rem 0;
+  background-color: #121212;
+  color: var(--body-font-color);
+  text-align: center;
+  position: relative;
+}
+
+.back-to-top{
+  width: 7rem;
+  height: 7rem;
+  background-color: #121212;
+  position: absolute;
+  top: -3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  
+}
+
+.back-to-top i{
+  display: block;
+  color: white;
+  font-size: 2rem;
+  padding: 2rem;
+  animation: up 2s infinite;
+}
+
+.footer-content{
+  overflow: hidden; 
+}
+
+.footer-content h4{
+  font-size: 1.9rem;
+  text-transform: uppercase;
+
+  letter-spacing: 2px;
+  margin-bottom: 1.8rem;
+}
+
+
+.footer-content-about{
+  margin-bottom: 1.8rem;
+
+}
+
+.footer-content-about p{
+  line-height: 2;
+  text-align: center;
+}
+
+.info{
+  margin: 3rem;
+}
+
+
+.social-icons{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+
+.social-icons i{
+  font-size: 2rem;
+  color: dimgray;
+  transition: color .5s;
+  padding: 0 .5rem;
+
+}
+
+.social-icons i:hover,
+.social-icons i:focus{
+  background: linear-gradient(to left, rgb(112,101,214), rgb(230,106,213));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: .5s;
+
+}
+
+.by{
+
+  text-align: center;
+  font-size: 14px;
+  margin-top: 1rem;
+  letter-spacing: .02rem;
+  line-height: 2rem;
+}
+
+.by a{
+   background: linear-gradient(to left, rgb(112,101,214), rgb(230,106,213));
+-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+/* Gallery*/
+
+/* Media queries */
+
+
+@media screen and (min-width: 900px){
+  
+  section{
+    padding: 7.9rem;
+  }
+  
+  .logo{
+    display: none;
+  }
+  
+  .menu-toggle{
+    display: none;
+  }
+  
+  .nav{
+    justify-content: center;
+  }
+  
+  .nav-list{
+    position: initial;
+    width: initial;
+    height: initial;
+    background-color: transparent;
+    padding: 0;
+    justify-content: initial;
+    flex-direction: row;
+    transform: initial;
+    transition: initial;
+    
+  }
+  .nav-item{
+    margin:  3.4rem;
+    border: none;
+  }
+ 
+  .nav-link{
+    font-size: 1.5rem;
+
+  }
+  .nav-link:hover{
+  animation: scale .5s;
+}
+  
+  .active{
+    position: relative;
+    
+  }
+
+  .active:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    left: 0;
+    bottom: -3px;
+  }
+  .sub-headline{
+    font-size: 5rem;
+    line-height: .9;
+  }
+  
+ 
+  .headline_records{
+    font-size: 2rem;
+    padding-left: 3.7rem;
+  }
+  
+  #newrelease div{
+  margin: 0 2rem;
+}
+  
+  .new{
+    width: 40%;
+    margin: 0 2rem;
+    font-size: 3rem;
+  }
+  .line{
+    max-width: 11.4rem;
+  }
+  .restaurant-info{
+    display: flex;
+    align-items: center;
+  }
+#release{
+  background-attachment: fixed;
+}
+  .hero{
+    background-attachment: fixed;
+  }
+  
+  #allrelease iframe{
+    width: 50%;
+  }
+
+  .restaurant-info > div{
+    flex: 1;
+    
+  }
+  .padding-right{
+    padding-right: 7rem;
+  }
+  .footer-content{
+    max-width: 77rem;
+    margin: auto;
+
+  }
+  
+  .footer-content-about{
+    max-width: 51.3rem;
+    margin: 4rem auto;;
+  }
+  
+  .footer-content-divider{
+    display: flex;
+    justify-content: center;
+    
+  }
+  .social-media{
+    width: 100%;
+    max-width: 27.3rem;
+  }
+
+
+  .discover-our-story h1{
+    font-size: 3.3rem;
+  }
+ 
+#allrelease iframe{
+  margin-bottom: 0;
+  margin-left: 7rem; 
+}
+  .upcoming{
+    background-position: 0 70%;
+  }
+  .upcoming-event{
+  margin-left: 10%
+    
+}
+  .podcast-title{
+    text-align: right;
+    margin: 0;
+  }
+}
+
+
+
+
+/* Animations */
+
+
+@keyframes fadeUp{
+  0%{
+    transform: translateY(4rem);
+  }
+  100%{
+    opacity: 1;
+     transform: translateY(0);
+  }
+}
+
+
+@keyframes scale {
+  0%{
+    transform: scale(1.2);
+  }
+  100%{
+    opacity: 1;
+     transform: scale(1);
+  }
+}
+
+
+
+@keyframes grow {
+  0%{
+    width: 0;
+  }
+  100%{
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+@keyframes spin{
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    opacity: 1;
+    transform: rotate(-160deg);
+  }
+}
+
+
+
+@keyframes fadeDown{
+  0%{
+    transform: translateY(-1rem);
+  }
+  100%{
+    opacity: 1;
+     transform: translateY(0);
+  }
+}
+
+
+@keyframes up{
+  0%{
+   opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+}
+
+
