@@ -173,7 +173,7 @@ header{
 .hero{
   width: 100%;
   height: 100vh;
-  background: linear-gradient(to top, rgba(0,0,88, .8), transparent), url("images/zenebonacrowd.jpeg") center no-repeat;
+  background: linear-gradient(to bottom, rgba(0,0,88, .8), rgba(12,13,31,.6)), url("images/zenebonarecords.jpg") center no-repeat;
   background-size: cover;
   display: flex;
   align-items:center;
@@ -351,17 +351,17 @@ header{
   margin: 1rem 0 0;
   letter-spacing: 7px;
   padding: 1rem 0 1rem 1rem;
-  background: linear-gradient(to left, rgba(82,132,142,  0)10%, rgba(32,73,121,.8) 100%);
+  background:linear-gradient(40deg, rgba(29,151,212,.8) 0%, rgba(164,82,157,.7) 59%);
 }
 
 #buy{
-  background: linear-gradient(90deg, rgba(32,73,121, .8)20%, rgba(82,132,142,.8) 100%);
+  background: linear-gradient(40deg, rgba(29,151,212,.8) 0%, rgba(164,82,157,.8) 59%);
   color: ghostwhite;
   font-size: 1.5rem;
   font-family: var(--secondary-font);
 }
 #buy:hover{
-  background: linear-gradient(90deg, rgba(32,73,121, .9) 20%, rgba(82,132,142,.9) 100%);
+  background: linear-gradient(40deg, rgba(29,151,212,1) 0%, rgba(164,82,157,1) 59%);
   color: white;
 }
 /* Discover our menu */
